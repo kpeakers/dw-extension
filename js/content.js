@@ -2,6 +2,23 @@ console.log("extension is running!")
 
 var imgURL = chrome.runtime.getURL("../images/wow.gif");
 
+// ^^ How to access content
+
+//chrome.runtime.onMessage.addListener(
+//function(request)	{
+//alert(request.message);
+//		}
+//);
+//
+//chrome.runtime.onMessage.addListener(
+//function(request,	sender,	sendResponse)	{
+//console.log(request.message);
+//sendResponse({farewell:	"goodbye"});
+//		}
+//);
+
+// ^^ Talking to popup i think?
+
 $("header").after("<img src=" + imgURL + " class='wow'>");
 console.log("wow?");
 
