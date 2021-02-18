@@ -1,6 +1,8 @@
 console.log("extension is running!")
 
-var imgURL = chrome.runtime.getURL("../images/wow.gif");
+var sticker = [chrome.runtime.getURL("../images/lotr1.gif"),
+             chrome.runtime.getURL("../images/lotr2.gif")];
+
 
 // ^^ How to access content
 
@@ -19,15 +21,20 @@ var imgURL = chrome.runtime.getURL("../images/wow.gif");
 
 // ^^ Talking to popup i think?
 
-$("header").after("<img src=" + imgURL + " class='wow'>");
-console.log("wow?");
+$("h1").on("click", function(){
+    (this).text("UGHHHHHHH")
+    console.log(WORKING)
+});
 
-$("p").after("yoyo from yo extension")
+//$("header").after("<img src=" + imgURL + " class='wow'>");
+//console.log("wow?");
 
-$(".hero-header .brand-header span").text("YO WTF")
 
 
-$("main").after("<img src='images/wow.gif'>");
+
+
+
+
 
 
 // TRY: updating the text content of an element or set of elements on one or more pages

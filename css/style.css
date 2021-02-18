@@ -17,9 +17,22 @@ h1, h2, p {
     font-family: cursive !important;
 }
 
+.sticker {
+    
+    width: 2rem;
+    height: 2rem;
+}
+
+.ex1 .sticker-img {
+    background-image: url(../images/dragon.gif);
+}
+
+.ex2 .sticker-img {
+    background-image: url(../images/dragon2.gif);
+}
 
 footer {
-    background-image: url(../images/wow.gif) !important;
+    
 }
 
 /* Try: targeting one element on a specific site and changing something about it's appearance*/
