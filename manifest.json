@@ -1,7 +1,7 @@
 {
     "manifest_version": 2, 
-    "name": "IDK",
-    "description": "IDK",
+    "name": "FANTASY JUNK",
+    "description": "JUST FANTASY THEMED JUNK",
     "version": "1.0",
     "permissions": ["activeTab"],
     "content_scripts": [

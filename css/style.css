@@ -4,17 +4,16 @@
 /* Try: updating the background to a gradient */
 
 body {
-    background: #1E9600;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #FF0000, #FFF200, #1E9600) !important;  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #FF0000, #FFF200, #1E9600) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+ 
 }
 
 
 /* Try: changing the font styling of h1 or h2 elements */
 
-h1, h2, p {
-    font-family: cursive !important;
+h1, h2, h3, h4, h5, h6, h7, h9, header, footer, p, span, a, ul, li, div {
+    
+    font-family: 'Dr Sugiyama', cursive !important;
+    font-size: 1.5rem !important;
 }
 
 .sticker {
