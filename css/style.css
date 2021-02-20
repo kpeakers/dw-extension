@@ -3,17 +3,26 @@
 
 /* Try: updating the background to a gradient */
 
+
 body {
- 
+       
+  background: #0f2027 !important; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #0f2027, #203a43, #2c5364) !important;/* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
+
+/*HOW TO IMPLEMENT ARRAY OF BGS LIKE THIS?? ^^*/
 
 
 /* Try: changing the font styling of h1 or h2 elements */
 
-h1, h2, h3, h4, h5, h6, h7, h9, header, footer, p, span, a, ul, li, div {
+h1, h2, h3, h4, h5, h6, h7, h9, header, footer, p, span, a, ul, li, div, input {
     
     font-family: 'Dr Sugiyama', cursive !important;
     font-size: 1.5rem !important;
+    
+/*    background-blend-mode: screen !important;*/
 }
 
 .sticker {
