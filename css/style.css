@@ -25,19 +25,7 @@ h1, h2, h3, h4, h5, h6, h7, h9, header, footer, p, span, a, ul, li, div, input {
 /*    background-blend-mode: screen !important;*/
 }
 
-.sticker {
-    
-    width: 2rem;
-    height: 2rem;
-}
 
-.ex1 .sticker-img {
-    background-image: url(../images/dragon.gif);
-}
-
-.ex2 .sticker-img {
-    background-image: url(../images/dragon2.gif);
-}
 
 footer {
     

@@ -1,7 +1,22 @@
 console.log("extension is running!")
 
-var sticker = [chrome.runtime.getURL("../images/lotr1.gif"),
-             chrome.runtime.getURL("../images/lotr2.gif")];
+var stickers = [chrome.runtime.getURL("../images/lotr1.gif"),
+                chrome.runtime.getURL("../images/lotr2.gif"),
+                chrome.runtime.getURL("../images/lotr3.gif"),
+                chrome.runtime.getURL("../images/lotr4.gif"),
+                chrome.runtime.getURL("../images/dragon.gif"),
+                chrome.runtime.getURL("../images/dragon2.gif"),
+                chrome.runtime.getURL("../images/skyrim1.gif"),
+                chrome.runtime.getURL("../images/skyrim2.gif"),
+                chrome.runtime.getURL("../images/skyrim3.gif"),
+                chrome.runtime.getURL("../images/skyrim4.gif")];
+
+var sounds = [chrome.runtime.getURL("../sounds/hptheme.mp3"),
+              chrome.runtime.getURL("../sounds/kneearrow.mp3"),
+              chrome.runtime.getURL("../sounds/shallnotpass.mp3"),
+              chrome.runtime.getURL("../sounds/skyrimdrum.mp3"),
+              chrome.runtime.getURL("../sounds/skyrimlvlup.mp3")];
+    
 
 
 // ^^ How to access content
@@ -21,7 +36,7 @@ var sticker = [chrome.runtime.getURL("../images/lotr1.gif"),
 
 // ^^ Talking to popup i think?
 
-$("h1").on("click", function(){
+$("body").on("click", function(){
     (this).text("UGHHHHHHH")
     console.log(WORKING)
 });
