@@ -1,14 +1,11 @@
-/* CSS HERE */
 
-
-/* Try: updating the background to a gradient */
-
-
+/*
 body, header, footer{
-   background: #134e5e; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #134e5e, #71b280) !important; /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #134e5e, #71b280) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   background: #134e5e; 
+  background: -webkit-linear-gradient(to right, #134e5e, #71b280) !important; 
+  background: linear-gradient(to right, #134e5e, #71b280) !important; 
 }
+*/
 
 body.dusk {
   background: #2c3e50; /* fallback for old browsers */

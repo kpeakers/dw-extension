@@ -16,9 +16,14 @@ var stickers = [chrome.runtime.getURL("../images/lotr1.gif"),
 
 // ^^ How to access content
 
+
+
+
+
+
 function playRandomSound(){
 
-      //An array to house all of the URLs of your sounds
+//      //An array to house all of the URLs of your sounds
    
 var sounds = [chrome.runtime.getURL("../sounds/hptheme.mp3"),
               chrome.runtime.getURL("../sounds/kneearrow.mp3"),
@@ -30,13 +35,14 @@ var sounds = [chrome.runtime.getURL("../sounds/hptheme.mp3"),
       var soundFile = sounds[Math.floor(Math.random()*sounds.length)];
       
       //Find the player element that you created and generate an embed file to play the sound within it
-      document.getElementById("player").innerHTML="<embed src=\""+soundFile+"\" hidden=\"true\" autostart=\"true\" loop=\"false\" />";
+      document.getElementById("player").innerHTML="<embed src=\"" +soundFile+ "\" hidden=\"true\" autostart=\"true\" loop=\"false\" />";
 }
 
-// ^^ https://forums.asp.net/t/1876176.aspx?Making+a+random+sound+play+when+a+button+is+clicked
+//// ^^ https://forums.asp.net/t/1876176.aspx?Making+a+random+sound+play+when+a+button+is+clicked
 
-$("body").on("click", function playRandomSound(){
+$("a").on("click", function(){
     
+    playRandomSound();
     console.log("PLAYING");
     
 });
@@ -50,6 +56,11 @@ $("body").on("click", function playRandomSound(){
 //console.log(random_sticker(stickers));
 
 // ^^  https://www.w3resource.com/javascript-exercises/javascript-array-exercise-35.php
+
+
+
+
+
 
 
 // START OF WORD REPLACEMENT PIECE
