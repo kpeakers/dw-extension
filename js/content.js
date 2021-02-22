@@ -1,35 +1,57 @@
 console.log("extension is running!");
 
-var stickers = [chrome.runtime.getURL("../images/lotr1.gif"),
-                chrome.runtime.getURL("../images/lotr2.gif"),
-                chrome.runtime.getURL("../images/lotr3.gif"),
-                chrome.runtime.getURL("../images/lotr4.gif"),
-                chrome.runtime.getURL("../images/dragon.gif"),
-                chrome.runtime.getURL("../images/dragon2.gif"),
-                chrome.runtime.getURL("../images/skyrim1.gif"),
-                chrome.runtime.getURL("../images/skyrim2.gif"),
-                chrome.runtime.getURL("../images/skyrim3.gif"),
-                chrome.runtime.getURL("../images/skyrim4.gif")];
+
 
     
-//var backgrounds = [dusk, forest, moss, horizon];
+function randomSticker(){
+    
+    var stickers = [chrome.runtime.getURL("images/lotr1.gif"),
+                chrome.runtime.getURL("images/lotr2.gif"),
+                chrome.runtime.getURL("images/lotr3.gif"),
+                chrome.runtime.getURL("images/lotr4.gif"),
+                chrome.runtime.getURL("images/dragon.gif"),
+                chrome.runtime.getURL("images/dragon2.gif"),
+                chrome.runtime.getURL("images/skyrim1.gif"),
+                chrome.runtime.getURL("images/skyrim2.gif"),
+                chrome.runtime.getURL("images/skyrim3.gif"),
+                chrome.runtime.getURL("images/skyrim4.gif")
+               ];
+    
+    var pickedSticker = stickers[Math.floor(Math.random()*stickers.length)];
+    
+    
 
-// ^^ How to access content
+};
+    
+$("body").on("click", function(){
+    $(this).prepend('<img src="' + pickedSticker + '"S style="position:absolute">');
+    
+     console.log ("STICKING");
+    
+});
+
+//function random_sticker(stickers) {
+//    return stickers[Math.floor(Math.random()*stickers.length)];
+//}
+//console.log(random_sticker(stickers));
+
+// ^^  https://www.w3resource.com/javascript-exercises/javascript-array-exercise-35.php
 
 
 
 
+// Z INDEX TO PLACE IN FRONT 
 
 
 function playRandomSound(){
 
 //      //An array to house all of the URLs of your sounds
    
-var sounds = [chrome.runtime.getURL("../sounds/hptheme.mp3"),
-              chrome.runtime.getURL("../sounds/kneearrow.mp3"),
-              chrome.runtime.getURL("../sounds/shallnotpass.mp3"),
-              chrome.runtime.getURL("../sounds/skyrimdrum.mp3"),
-              chrome.runtime.getURL("../sounds/skyrimlvlup.mp3")];
+var sounds = [chrome.runtime.getURL("sounds/hptheme.mp3"),
+              chrome.runtime.getURL("sounds/kneearrow.mp3"),
+              chrome.runtime.getURL("sounds/shallnotpass.mp3"),
+              chrome.runtime.getURL("sounds/skyrimdrum.mp3"),
+              chrome.runtime.getURL("sounds/skyrimlvlup.mp3")];
       
       //This line will select a random sound to play out of your provided URLS
       var soundFile = sounds[Math.floor(Math.random()*sounds.length)];
@@ -40,7 +62,7 @@ var sounds = [chrome.runtime.getURL("../sounds/hptheme.mp3"),
 
 //// ^^ https://forums.asp.net/t/1876176.aspx?Making+a+random+sound+play+when+a+button+is+clicked
 
-$("a").on("click", function(){
+$("img").on("click", function(){
     
     playRandomSound();
     console.log("PLAYING");
@@ -50,12 +72,6 @@ $("a").on("click", function(){
 
 
 
-//function random_sticker(stickers) {
-//    return stickers[Math.floor(Math.random()*stickers.length)];
-//}
-//console.log(random_sticker(stickers));
-
-// ^^  https://www.w3resource.com/javascript-exercises/javascript-array-exercise-35.php
 
 
 

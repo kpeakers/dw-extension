@@ -7,6 +7,12 @@ body, header, footer{
 }
 */
 
+body {
+    background-image: url(../images/paper.jpeg) !important;
+    
+    background-color: burlywood !important;
+}
+
 body.dusk {
   background: #2c3e50; /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #2c3e50, #fd746c) !important; /* Chrome 10-25, Safari 5.1-6 */
@@ -50,7 +56,11 @@ h1, h2, h3, h4, h5, h6, h7, h9, header, footer, p, span, a, ul, li, div, input, 
     
 }
 
+img {
 
+    z-index: 100;
+    max-width: 100%;
+}
 
 /* Try: targeting one element on a specific site and changing something about it's appearance*/
 
