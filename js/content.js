@@ -27,8 +27,12 @@ function randomSticker(){
     
 $("body").on("click", function(){
     randomSticker();
-    $(this).prepend('<img src="' + pickedSticker + '"S class="sticker' + num + '">');
+    $(this).append('<img src="' + pickedSticker + '"S class="sticker' + num + '">');
     num++;
+    
+    if (num > 9) {
+    num == 0;
+}
     
     // MAKE NUM = 0, click >> num++; CSS: .sticker0 : all rules 
     
@@ -44,17 +48,7 @@ $("body").on("click", function(){
     
 });
 
-//function random_sticker(stickers) {
-//    return stickers[Math.floor(Math.random()*stickers.length)];
-//}
-//console.log(random_sticker(stickers));
 
-// ^^  https://www.w3resource.com/javascript-exercises/javascript-array-exercise-35.php
-
-
-
-
-// Z INDEX TO PLACE IN FRONT 
 
 
 function playRandomSound(){
@@ -76,14 +70,6 @@ var sounds = [chrome.runtime.getURL("sounds/hptheme.mp3"),
     
 
 }
-
-
-
-
-
-
-
-
 
 
 

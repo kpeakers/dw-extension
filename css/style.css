@@ -8,9 +8,9 @@ body, header, footer{
 */
 
 body {
-    background-image: url(../images/paper.jpeg) !important;
+    background-image: url(images/paper.jpeg) !important;
     
-    background-color: burlywood !important;
+/*    background-color: burlywood !important;*/
 }
 
 body.dusk {
@@ -47,7 +47,7 @@ body.horizon {
 
 /* Try: changing the font styling of h1 or h2 elements */
 
-h1, h2, h3, h4, h5, h6, h7, h9, header, footer, p, span, a, ul, li, div, input, em {
+h1, h2, h3, h4, h5, h6, h7, h9, header, footer, p, span, a, ul, li, div, input, em, button {
     
     font-family: 'Dr Sugiyama', cursive !important;
     font-size: 1.7rem !important;
@@ -57,10 +57,79 @@ h1, h2, h3, h4, h5, h6, h7, h9, header, footer, p, span, a, ul, li, div, input, 
 }
 
 img {
-
-    z-index: 100;
     max-width: 100%;
 }
+
+.sticker0 {
+    z-index: 20;
+    position: absolute;
+    right: 0;
+    top: 50vh;
+}
+
+.sticker1 {
+    z-index: 40;
+    position: absolute;
+    left: 20vw;
+    top: 70vh;
+}
+
+.sticker2 {
+    z-index: 60;
+    position: absolute;
+    left: 10vw;
+    top: 20vh;
+}
+
+.sticker3 {
+    z-index: 80;
+    position: absolute;
+    right: 30vw;
+    bottom: 40vh;
+}
+
+.sticker4 {
+    z-index: 100;
+    position: absolute;
+    right: 0;
+    top: 20vh;
+}
+
+.sticker5 {
+    z-index: 120;
+    position: absolute;
+    left: 0vw;
+    bottom: 40vh;
+}
+
+.sticker6 {
+    z-index: 140;
+    position: absolute;
+    right: 0vw;
+    bottom: 20vh;
+}
+
+.sticker7 {
+    z-index: 160;
+    position: absolute;
+    left: 0vw;
+    top: 10vh;
+}
+
+.sticker8 {
+    z-index: 180;
+    position: absolute;
+    left: 50vw;
+    bottom: 90vh;
+}
+
+.sticker9 {
+    z-index: 200;
+    position: absolute;
+    right: 0vw;
+    top: 40vh;
+}
+/* Z INDEX TO PLACE IN FRONT */
 
 /* Try: targeting one element on a specific site and changing something about it's appearance*/
 
