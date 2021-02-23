@@ -1,7 +1,9 @@
 console.log("extension is running!");
 
 
+var pickedSticker;
 
+var num = 0;
     
 function randomSticker(){
     
@@ -17,16 +19,28 @@ function randomSticker(){
                 chrome.runtime.getURL("images/skyrim4.gif")
                ];
     
-    var pickedSticker = stickers[Math.floor(Math.random()*stickers.length)];
+   pickedSticker = stickers[Math.floor(Math.random()*stickers.length)];
     
     
 
 };
     
 $("body").on("click", function(){
-    $(this).prepend('<img src="' + pickedSticker + '"S style="position:absolute">');
+    randomSticker();
+    $(this).prepend('<img src="' + pickedSticker + '"S class="sticker' + num + '">');
+    num++;
+    
+    // MAKE NUM = 0, click >> num++; CSS: .sticker0 : all rules 
+    
     
      console.log ("STICKING");
+    
+    $("img").on("click", function(){
+    
+    playRandomSound();
+    console.log("PLAYING");
+    
+});
     
 });
 
@@ -56,18 +70,16 @@ var sounds = [chrome.runtime.getURL("sounds/hptheme.mp3"),
       //This line will select a random sound to play out of your provided URLS
       var soundFile = sounds[Math.floor(Math.random()*sounds.length)];
       
-      //Find the player element that you created and generate an embed file to play the sound within it
-      document.getElementById("player").innerHTML="<embed src=\"" +soundFile+ "\" hidden=\"true\" autostart=\"true\" loop=\"false\" />";
+    
+
+    $("body").prepend("<audio autoplay> <source src=\"" +soundFile+ "\" type=\"audio/mpeg\"></audio>");
+    
+
 }
 
-//// ^^ https://forums.asp.net/t/1876176.aspx?Making+a+random+sound+play+when+a+button+is+clicked
 
-$("img").on("click", function(){
-    
-    playRandomSound();
-    console.log("PLAYING");
-    
-});
+
+
 
 
 

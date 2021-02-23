@@ -22,6 +22,7 @@
         "images/*.jpg",
         "images/*.png",
         "images/*.svg",
-        "images/*.gif"
+        "images/*.gif",
+        "sounds/*.mp3"
      ] 
 }
