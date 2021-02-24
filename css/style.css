@@ -1,51 +1,9 @@
-
-/*
-body, header, footer{
-   background: #134e5e; 
-  background: -webkit-linear-gradient(to right, #134e5e, #71b280) !important; 
-  background: linear-gradient(to right, #134e5e, #71b280) !important; 
-}
-*/
-
-body {
-    background-image: url(images/paper.jpeg) !important;
-    
-/*    background-color: burlywood !important;*/
-}
-
-body.dusk {
-  background: #2c3e50; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #2c3e50, #fd746c) !important; /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #2c3e50, #fd746c) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-}
-
-body.forest {
-  background: #5a3f37; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #5a3f37, #2c7744) !important; /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #5a3f37, #2c7744) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
-}
-
-body.moss {
-  background: #134e5e; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #134e5e, #71b280) !important; /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #134e5e, #71b280) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-}
-
-body.horizon {
-  background: #003973; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #003973, #e5e5be) !important; /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #003973, #e5e5be) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+@font-face {
+  font-family: 'Dr Sugiyama';
+  src: url("/fonts/DrSugiyama-Regular.ttf") format("ttf");
 }
 
 
-/*HOW TO IMPLEMENT ARRAY OF BGS LIKE THIS?? ^^*/
-
-
-/* Try: changing the font styling of h1 or h2 elements */
 
 h1, h2, h3, h4, h5, h6, h7, h9, header, footer, p, span, a, ul, li, div, input, em, button {
     
@@ -129,7 +87,3 @@ img {
     right: 0vw;
     top: 40vh;
 }
-/* Z INDEX TO PLACE IN FRONT */
-
-/* Try: targeting one element on a specific site and changing something about it's appearance*/
-

@@ -1,13 +1,15 @@
 console.log("extension is running!");
 
 
+
 var pickedSticker;
 
 var num = 0;
     
 function randomSticker(){
     
-    var stickers = [chrome.runtime.getURL("images/lotr1.gif"),
+    var stickers = [
+                chrome.runtime.getURL("images/lotr1.gif"),
                 chrome.runtime.getURL("images/lotr2.gif"),
                 chrome.runtime.getURL("images/lotr3.gif"),
                 chrome.runtime.getURL("images/lotr4.gif"),
@@ -21,21 +23,33 @@ function randomSticker(){
     
    pickedSticker = stickers[Math.floor(Math.random()*stickers.length)];
     
-    
-
 };
     
+
+
 $("body").on("click", function(){
+    var usedStickers = [];
+    
+    // ^^ need to knows stickers have been used to clear them
+    
     randomSticker();
-    $(this).append('<img src="' + pickedSticker + '"S class="sticker' + num + '">');
-    num++;
+    newImage = '<img src="' + pickedSticker + '"S class="sticker' + num + '">';
     
-    if (num > 9) {
-    num == 0;
-}
+    usedStickers[num] = newImage;
+    $(this).append(newImage);
+    num = (num + 1)%9;
     
-    // MAKE NUM = 0, click >> num++; CSS: .sticker0 : all rules 
+    // counting up to clear the stickers after so many
     
+    var tags = ['.sticker0', '.sticker1','.sticker2','.sticker3','.sticker4','.sticker5','.sticker6','.sticker7','.sticker8','.sticker9'];
+        
+    if(num ==0){
+        for (i = 0; i < tags.length; i++){
+            $("img").remove(tags[i]);
+        }
+    }
+    
+    // clears all the stickers
     
      console.log ("STICKING");
     
@@ -55,8 +69,7 @@ function playRandomSound(){
 
 //      //An array to house all of the URLs of your sounds
    
-var sounds = [chrome.runtime.getURL("sounds/hptheme.mp3"),
-              chrome.runtime.getURL("sounds/kneearrow.mp3"),
+var sounds = [chrome.runtime.getURL("sounds/kneearrow.mp3"),
               chrome.runtime.getURL("sounds/shallnotpass.mp3"),
               chrome.runtime.getURL("sounds/skyrimdrum.mp3"),
               chrome.runtime.getURL("sounds/skyrimlvlup.mp3")];
@@ -140,7 +153,18 @@ function replaceText (node) {
   node.nodeValue = value;
 }
 
-window.onload = findAndReplace();
-
 //  ^^ CODE FROM https://nkhilv.medium.com/how-to-make-a-word-replacement-chrome-extension-17cbd3639db6
+
+window.onload = function () {
+//     document.body.style.background = 'red';
+    findAndReplace();
+    myIMG = chrome.extension.getURL("/images/paper.jpeg");
+    document.body.style.backgroundImage = 'url(' + myIMG + ')';
+};
+
+// changes the background to parchment
+
+//window.onload = findAndReplace();
+
+
 
